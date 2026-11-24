@@ -1,7 +1,3 @@
-let humanScore = 0;
-let computerScore = 0;
-
-
 function getComputerChoice() {
 
     const computerChoice = Math.random();
@@ -27,9 +23,23 @@ function getHumanChoice() {
     }
 }
 
-function playRound(humanChoice, computerChoice) {
 
+
+//const humanSelection = getHumanChoice(); /* has the value that getHumanChoice produces */
+//const computerSelection = getComputerChoice(); /*has the value that getComputerChoice produces */
+
+
+
+
+function playGame() {
+    let humanScore = 0;
+    let computerScore = 0;
+
+    function playRound(humanChoice, computerChoice) {
+
+    console.log("Computer chose:", computerChoice);
     humanChoice = humanChoice.toLowerCase();
+
     if (humanChoice === "rock" && computerChoice === "scissors") {
         console.log("You win! rock beats scissors!");
         return ++humanScore;
@@ -60,18 +70,33 @@ function playRound(humanChoice, computerChoice) {
         console.log("Invalid choice.")
     }
 }
+    playRound(getHumanChoice(), getComputerChoice());
+    
 
-const humanSelection = getHumanChoice(); /* has the value that getHumanChoice produces */
-const computerSelection = getComputerChoice(); /*has the value that getComputerChoice produces */
+    playRound(getHumanChoice(), getComputerChoice());
 
-console.log("Computer chose", computerSelection);
-playRound(humanSelection, computerSelection);
+    playRound(getHumanChoice(), getComputerChoice());
+   
+    playRound(getHumanChoice(), getComputerChoice());
+    
+    playRound(getHumanChoice(), getComputerChoice());
 
-function playGame() {
 
-    playRound(humanSelection,)
+    console.log("Your score:", humanScore);
+    console.log("Computer score:", computerScore);
 
+    
+    if (humanScore > computerScore) {
+        console.log("YOU WON!!");
+    } else if (computerScore > humanScore) {
+        console.log("You lost, hard luck");
+    } else {
+        console.log("Tie game. Actually you know what ? you both lose.")
+    }
+    
 }
+
+playGame();
 
 
 
