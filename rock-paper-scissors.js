@@ -61,12 +61,17 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+const humanSelection = getHumanChoice(); /* has the value that getHumanChoice produces */
+const computerSelection = getComputerChoice(); /*has the value that getComputerChoice produces */
 
+console.log("Computer chose", computerSelection);
 playRound(humanSelection, computerSelection);
 
-console.log(computerScore);
+function playGame() {
+
+    playRound(humanSelection,)
+
+}
 
 
 
