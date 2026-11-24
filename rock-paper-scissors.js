@@ -14,7 +14,7 @@ function getComputerChoice() {
 
 function getHumanChoice() {
 
-    const humanChoice = prompt("Pick:", "rock").toLowerCase();
+    const humanChoice = prompt("Pick between rock, paper and scissors:", "rock").toLowerCase();
 
     if (humanChoice === "rock" || humanChoice === "paper" || humanChoice === "scissors") {
         return humanChoice;
